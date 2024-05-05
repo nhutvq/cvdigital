@@ -1,0 +1,263 @@
+/* XỬ LÝ SECTION BANNER */
+
+#banner {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Giảm chiều cao của banner */
+}
+
+#banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh bao phủ toàn bộ khu vực mà không bị méo */
+  filter: brightness(
+    50%
+  ); /* Giảm độ sáng của ảnh để nội dung chữ nổi bật hơn */
+}
+
+.banner-header {
+  position: absolute;
+  top: 50%; /* Căn giữa theo chiều dọc */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Dịch chuyển về giữa */
+  text-align: center;
+  color: white; /* Màu chữ trắng */
+  padding: 0 20px; /* Thêm padding xung quanh văn bản */
+}
+
+.banner-header h1,
+.banner-header p {
+  margin: 0; /* Xóa các khoảng cách mặc định */
+  padding: 0; /* Xóa padding mặc định nếu có */
+}
+
+.banner-header h1 {
+  margin-bottom: 20px; /* Tạo khoảng cách giữa họ tên và chuyên ngành */
+}
+
+/* XỬ LÝ SECTION NAV */
+/* Thêm CSS cho các icon để canh giữa các nút */
+.nav-item i {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.navbar-nav {
+  align-items: center; /* Đảm bảo tất cả các mục nav và avatar được căn giữa theo chiều dọc */
+}
+
+.navbar-nav .nav-link {
+  margin-right: 20px; /* Thêm khoảng cách giữa các liên kết */
+}
+
+.navbar-nav .nav-link .icon {
+  font-size: 1.2em; /* Điều chỉnh kích thước icon */
+}
+
+.navbar-avatar {
+  z-index: 10; /* Đảm bảo avatar luôn nổi bật so với các thành phần khác */
+  position: relative; /* Đặt avatar ở vị trí tương đối để có thể điều chỉnh dễ dàng hơn */
+  top: -20px; /* Nhấc avatar lên một chút so với hàng của nó */
+}
+/* Các thay đổi chỉ áp dụng cho màn hình nhỏ hơn 992px */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    text-align: left; /* Căn các liên kết về phía bên trái */
+  }
+
+  .nav-link {
+    padding: 8px 15px; /* Thêm padding cho mỗi liên kết để dễ nhấn hơn */
+    margin: 0; /* Xóa margin mặc định */
+    border-bottom: 1px solid #ddd; /* Thêm đường viền dưới cho mỗi liên kết */
+    color: #333; /* Màu chữ tối cho khả năng đọc tốt hơn */
+    background-color: #f8f9fa; /* Màu nền nhẹ cho mỗi liên kết */
+    width: 100%; /* Đảm bảo liên kết mở rộng toàn bộ chiều rộng có thể */
+  }
+
+  .nav-link:last-child {
+    border-bottom: none; /* Xóa đường viền dưới cho liên kết cuối cùng */
+  }
+
+  .navbar-nav {
+    width: 100%; /* Đảm bảo navbar chiếm toàn bộ chiều rộng có thể */
+  }
+
+  .icon {
+    margin-right: 10px; /* Đảm bảo có khoảng cách giữa biểu tượng và văn bản */
+  }
+}
+
+/* XỬ LÝ SECTION ABOUT */
+#about .section-title {
+  color: #343a40; /* Màu đen nhẹ cho tiêu đề */
+  font-weight: 700;
+}
+
+#about p {
+  font-size: 1.1rem; /* Kích thước chữ cho đoạn văn */
+  color: #666; /* Màu chữ cho nội dung */
+  line-height: 1.6; /* Khoảng cách dòng */
+}
+
+#about ul {
+  padding-left: 0; /* Loại bỏ padding mặc định */
+  list-style-type: none; /* Loại bỏ dấu đầu dòng */
+  margin-bottom: 0; /* Loại bỏ khoảng cách dưới cùng của danh sách */
+}
+
+#about li {
+  margin-bottom: 10px; /* Tăng khoảng cách giữa các mục */
+}
+
+#about li strong {
+  color: #0056b3; /* Màu xanh cho các từ mạnh mẽ */
+}
+
+#about a {
+  color: #000; /* Màu đen cho liên kết */
+  text-decoration: none; /* Loại bỏ gạch chân */
+}
+
+#about a:hover {
+  text-decoration: underline; /* Thêm gạch chân khi hover */
+}
+
+#about .social-icons a {
+  display: inline-block;
+  margin-right: 10px; /* Khoảng cách giữa các icon */
+  width: 40px; /* Kích thước của icon */
+  height: 40px; /* Kích thước của icon */
+  background-size: contain; /* Cho hình ảnh phủ kín khung */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#about .icon-github { background-image: url('path_to_your_twitter_icon'); }
+#about .icon-facebook { background-image: url('path_to_your_facebook_icon'); }
+#about .icon-gplus { background-image: url('path_to_your_google_plus_icon'); }
+#about .icon-linkedin { background-image: url('path_to_your_linkedin_icon'); }
+
+
+/* XỬ LÝ SECTION THÔNG TIN */
+
+.custom-card {
+  background-color: #f7f7f7; /* Màu nền cho thẻ */
+  border-radius: 8px; /* Bo tròn các góc của thẻ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho thẻ */
+}
+
+.custom-card h3,
+.custom-card h5 {
+  color: #0056b3; /* Màu chữ cho tiêu đề */
+}
+
+.date-highlight {
+  font-weight: bold;
+  color: #d9534f; /* Màu sắc cho mốc thời gian */
+}
+
+.custom-card p {
+  line-height: 1.5; /* Khoảng cách dòng cho đoạn văn */
+}
+
+.custom-card .fw-bold {
+  color: #284b63; /* Màu chữ nổi bật cho các công ty */
+}
+
+/* XỬ LÝ SECTION CHỨNG CHỈ */
+#certificate .section-title {
+  color: #007bff; /* Màu xanh nổi bật cho tiêu đề */
+  font-weight: bold;
+}
+
+#certificate .card {
+  border: none; /* Loại bỏ đường viền của card */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ nhẹ */
+  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng phóng to khi hover */
+}
+
+#certificate .card:hover {
+  transform: scale(1.05); /* Phóng to card khi hover */
+}
+
+#certificate .card-img-top {
+  height: 180px; /* Đặt chiều cao ảnh thống nhất */
+  object-fit: cover; /* Đảm bảo ảnh phủ kín khung hình mà không bị méo */
+}
+
+#certificate .card-title {
+  color: #284b63; /* Màu sắc cho tiêu đề card */
+  font-weight: bold;
+}
+
+#certificate .card-text {
+  color: #666; /* Màu chữ cho nội dung card */
+}
+
+/* XỬ LÝ SECTION DỰ ÁN */
+#project .section-title {
+  color: #343a40; /* Màu đen nhẹ cho tiêu đề */
+  font-weight: 700;
+}
+
+#project .card {
+  border: none; /* Loại bỏ viền của card */
+  border-radius: 10px; /* Làm tròn góc của card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho card */
+  transition: transform 0.3s; /* Hiệu ứng chuyển đổi cho hover */
+}
+
+#project .card:hover {
+  transform: translateY(-5px); /* Di chuyển card lên khi hover */
+}
+
+#project .card-img-top {
+  height: 200px; /* Chiều cao ảnh */
+  object-fit: cover; /* Đảm bảo ảnh phủ đầy khung */
+  border-top-left-radius: 10px; /* Làm tròn góc trên của ảnh */
+  border-top-right-radius: 10px;
+}
+
+#project .card-title {
+  color: #007bff; /* Màu xanh cho tiêu đề card */
+  margin-top: auto; /* Đẩy tiêu đề xuống dưới cùng */
+}
+
+#project .project-details p {
+  font-size: 0.9rem; /* Kích thước font nhỏ hơn cho chi tiết dự án */
+}
+
+#project .project-description td {
+  color: #666; /* Màu chữ cho mô tả */
+}
+
+/* XỬ LÝ SECTION FOOTER */
+#footer {
+  background-color: #f8f9fa; /* Light grey background */
+  color: #333; /* Darker text for better contrast */
+}
+
+#footer a {
+  color: inherit; /* Ensures the links use the footer's text color */
+  text-decoration: none; /* No underlines on links */
+  transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+#footer a:hover {
+  color: #0056b3; /* Highlight color when hovered */
+}
+
+#footer .icon {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+#footer ul {
+  padding-left: 0; /* Remove default padding */
+}
+
+#footer li {
+  padding: 8px; /* Spacing around items */
+}
+.navbar-avatar {
+  width: 40px; /* Đặt chiều rộng cho avatar */
+  height: 40px; /* Đặt chiều cao cho avatar */
+}
